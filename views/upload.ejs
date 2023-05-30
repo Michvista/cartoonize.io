@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload</title>
+  <link rel="stylesheet" href="/upload.css">
+  <link rel="shortcut icon" href="/Nifemi_logo_with_the_letters_C_A_I_c590da2e-4ea1-4404-930a-6bb6c9b122e8_2-removebg-preview (1).png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="button">
+  <h1>Toon yourself</h1>
+  <form action="/api/upload" method="POST" enctype="multipart/form-data">
+  <div class="file">
+      <label  for="file" class="upload">
+        Upload an Image
+        <input type="file" class="files" id="myNameFile" name="myFile"  accept=".png, .jpg, .jpeg">
+      </label>
+      <button type="submit" class="submit">Submit</button>
+  </div>
+</div>
+</form> 
+</body>
+<script>
+//   function alertMe(event) {
+//     const fileInput = document.querySelector('.files');
+//     const firstImgCont = document.querySelector('.first-image');
+//     fileInput.addEventListener('change', () => {
+//       for (const file of fileInput.files) {
+//         // const fileName = file.name;
+//       //  firstImgCont.style.backgroundImage = `url(${fileName})`
+//       document.documentElement.style.setProperty('--bg', `url(${file.name})` )
+//       }
+//     })
+//           }
+const overlay = document.querySelector(".upload");
+  const get = document.querySelector('form')
+const input = document.getElementById("myNameFile");
+// console.log(overlay)
+function alertMe() {
+  // let boo = false
+  // setTimeout(()=> {
+  //   if(!boo) {
+  //     boo = true
+  //     get.submit()
+  //     boo = false
+  //   }
+  // }, 5)
+}
+overlay.addEventListener('click', () => {
+  // input.onchange()
+  input.click();
+    // buttonObject.type = 'submit'
+    // overlay.type = 'submit'
+})
+</script>
+</html>
