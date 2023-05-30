@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Create an account</title>
+        <script src="https://kit.fontawesome.com/d4bd732f50.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/createAccount.css">
+      <script defer src="index.bundle.js"></script>
+    </head>
+      <body>
+        <div class="navbar">
+          <nav>
+            <h5>Logo</h5>
+            <ul>
+              <li><a href="/">Home</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="formCont">
+          <h2>Create an Account</h2>
+          <p>Already a member? <span><a href="/signIn">Log in</a></span></p>
+          <form class="signup">
+            <div class="row1">
+              <input type="text" placeholder="Card Number" class="left cardNo" name="cardNo">
+              <input type="text" placeholder="Card Holder Number" class="two">
+            </div>
+            <div class="row2">
+              <input type="text" placeholder="Security digits" class="left three">
+            <div class="passwordIcon">
+              <input type="password" id="pass" placeholder="Bank password" class="four">
+              <i class="fa-solid fa-eye" id="firstPass"></i>
+            </div>  
+            </div>
+            <input placeholder="Email" type="email"name="email" class="full five">
+            <div class="passwordIcon">
+              <input placeholder="Password" id="passwordSec" type="password" name="password" class="full fiveLast">
+              <i class="fa-solid fa-eye" id="sec"></i>
+            </div>
+            <div class="wrap">
+              <button>Sign Up</button>
+            </div>
+          </form>
+        </div>
+    </body>
+    </html>

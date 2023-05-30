@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4bd732f50.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="sidebar">
+            <div class="navbar">
+                <nav class="navigator">
+                <h3>Bank</h3>
+                    <ul>
+                        <li class="act">
+                            <a href="#">
+                                 <i class="fa-solid fa-gauge"></i> Dashboard
+                                </a>
+                                </li>
+                        <li class="act">
+                            <div class="flex">
+                                <i class="fa-solid fa-gear"></i> 
+                                <a href="#"> Categories </a>
+                            </div>
+                    </li>
+                        <li class="act"><a href="#"> <i class="fa-solid fa-money-bill-1-wave"></i> Transactions</a></li>
+                        <li class="act"><a href="#"> <i class="fa-solid fa-credit-card"></i> Cards</a></li>
+                        <li class="act"><a href="#"> <i class="fa-regular fa-id-card"></i> Profile</a></li>
+                        <li class="act"><a href="#"> <i class="fa-solid fa-wrench"></i> Settings</a></li>
+                    </ul>
+                    <div class="card">
+                        <h6> <a href="">Get our Premium features!</a></h6>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="bodyCont">
+            <div class="wrap">
+                <h5>Overview</h5> 
+                <div class="join">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+    <div class="firstThreeCards">
+        <div class="card1">
+            <i class="fa-solid fa-check-to-slot"></i>
+            <div class="text">
+                <h4 class="title">Completed</h4>
+                <p class="num">1,300</p>
+            </div>
+        </div>
+        <div class="card1">
+            <i class="fa-solid fa-file-excel"></i>
+            <div class="text">
+                <h4 class="title">Failed</h4>
+                <p class="num">42</p>
+            </div>
+        </div>
+        <div class="card1">
+            <i class="fa-solid fa-spinner"></i>
+            <div class="text">
+                <h4 class="title">Ongoing</h4>
+                <p class="num">128</p>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="customer">
+            <div class="graph">
+                <h4>Customer Based Region</h4>
+                <div class="piechart">
+                   <div class="donut"><div class="hole"></div></div>
+                </div>
+                </div>
+                <div class="colorCubes">
+                    <h4>Codes &darr; </h4>
+                    <div class="cubes">
+                        <div class="cubiod">
+                            <span class="cube"></span>
+                            <p>Africa</p>
+                        </div>
+                        <div class="cubiod">
+                            <span class="cube two"></span>
+                            <p>Europe</p>
+                        </div>
+                        <div class="cubiod">
+                            <span class="cube three"></span>
+                            <p>Asia</p>
+                        </div>
+                        <div class="cubiod">
+                            <span class="cube four"></span>
+                            <p>North America</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            <div class="spendings">
+                <h4>Alerts this week</h4>
+                <div class="price">
+                    <h5>Credit Total </h5>
+                    <p><span>564k <sup>$</sup></span></p>
+                </div>
+                <div class="price">
+                    <h5>Debit Total </h5>
+                    <p><span>164k <sup>$</sup></span></p>
+                </div>
+                <div class="circle"></div>
+            </div>
+    </div>
+        </div>
+        <div class="dashboard">
+           <div class="welcome">
+            <i class="fa-solid fa-bell"></i>
+            <p>Emma Victor</p>
+           </div>
+           <div class="centerCard">
+               <div class="bankCard">
+                <p class="cardNo"> ID 412 412 412 </p>
+                <div class="income">
+                    <h4>Your Income</h4>
+                    <h2>$2,000</h2>
+                </div>
+               </div>
+           </div>
+           <div class="transactions">
+               <div class="cover">
+                <h3>Last Transaction</h3>
+                <a href="">See All</a>
+            </div>
+            <div class="cardsTransc">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="creditCard">
+                    <div class="titleCredit">
+                        <h6>Lesson Money</h6>
+                        <p>200$</p>
+                    </div>
+                    <div class="infoCredit">
+                        <h6>Little Vic</h6>
+                        <p>12 Jan 2002</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardsTransc two">
+                <i class="fa-solid fa-arrow-trend-down"></i>
+                <div class="creditCard">
+                    <div class="titleCredit">
+                        <h6>NEPA Money</h6>
+                        <p>100$</p>
+                    </div>
+                    <div class="infoCredit">
+                        <h6>NEPA</h6>
+                        <p>10 Jan 2002</p>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+<script>
+    const linkss = Array.from(document.querySelectorAll('li'))
+    const links =  document.getElementsByClassName('act')
+    linkss.forEach((link) => {
+        link.addEventListener('click', () => {
+            for(i= 0; i < links.length; i++) {
+                    links[i].className =
+                   links[i].className.replace('active', '')
+                }
+            event.currentTarget.className += ' active'
+        })
+    })
+    const firstLink = document.querySelectorAll('li')[0]
+    firstLink.click()
+</script>
+</html>
